@@ -1,0 +1,109 @@
+
+#navbar{
+    display:grid;
+    grid-template-areas: 
+    "title . . . home contribute about contact";
+    height:10vh;
+    width:100vw;
+    justify-items:center;
+    align-items: center;
+    margin-top:-30px;
+}
+#title{
+    grid-area:title;
+    font-size:40px;
+    padding-top:-10;
+}
+#homelink{
+    grid-area:home;
+}
+#contributelink{
+    grid-area:contribute;
+}
+#aboutlink{
+    grid-area:about;
+}
+#contactlink{
+    grid-area:contact;
+}
+
+
+#photobar{
+    background-image:url("https://images.unsplash.com/photo-1561871688-6fc80e211177?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=869&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 75vh;
+    width:100vw;
+    display:grid;
+    grid-template-areas: 
+    ". searchbar";
+    margin-top:10px;
+    align-items:center;
+}
+
+#search{
+    grid-area:searchbar;
+    background-color:rgba(242, 242, 242, 0.515);
+    height: 200px;
+    display:grid;
+    grid-template-areas: 
+    "text ."
+    "text bar"
+    "text button"
+    "text .";
+    padding-right:20px;
+    align-items:center;
+    justify-items:center;
+}
+
+#recyclable{   
+    grid-area:text;
+    font-size: 60px;
+    text-align: left;
+    line-height: 55px; 
+    
+}
+
+#bar{
+    grid-area:bar;
+    height:40px;
+    width:300px;
+    font-size: 20px;
+    text-align:center;
+}
+#submitbutton{
+    grid-area:button;
+    width:100px;
+    align-self:center;
+}
+
+#three-rs{
+    display:grid;
+    grid-template-areas: 
+    "head head head"
+    "reduce reuse recycle";
+    align-items: start;
+    justify-items:center;
+    height:80vh;
+}
+#head{
+    grid-area:head;
+}
+#reduce{
+    grid-area:reduce;
+    text-align:center;
+    width: 20vw;
+}
+#reuse{
+    grid-area:reuse;
+    text-align:center;
+}
+#recycle{
+    grid-area:recycle;
+    text-align:center;
+}
+ul{
+    font-size:large;
+    text-align:center;
+    list-style-position: inside;
+}

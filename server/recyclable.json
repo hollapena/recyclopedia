@@ -1,0 +1,410 @@
+[
+    {
+        "item": "magazine",
+        "recyclable": "yes", 
+        "id":1
+    },
+    {
+        "item": "catalog",
+        "recyclable": "yes", 
+        "id":2
+    },
+    {
+        "item": "newspaper",
+        "recyclable": "yes", 
+        "id":3
+    },
+    {
+        "item": "envelope",
+        "recyclable": "yes", 
+        "id":4
+    },
+    {
+        "item": "sticky note",
+        "recyclable": "yes", 
+        "id":5
+    },
+    {
+        "item": "post it",
+        "recyclable": "yes", 
+        "id":6
+    },
+    {
+        "item": "file folder",
+        "recyclable": "yes", 
+        "id":7
+    },
+    {
+        "item": "cereal box",
+        "recyclable": "yes", 
+        "id":8
+    },
+    {
+        "item": "cookie box",
+        "recyclable": "yes", 
+        "id":9
+    },
+    {
+        "item": "shipping box",
+        "recyclable": "yes", 
+        "id":10
+    },
+    {
+        "item": "shoe box",
+        "recyclable": "yes", 
+        "id":11
+    },
+    {
+        "item": "soda can",
+        "recyclable": "yes", 
+        "id":12
+    },
+    {
+        "item": "water bottle",
+        "recyclable": "yes", 
+        "id":13
+    },
+    {
+        "item": "can",
+        "recyclable": "yes",
+        "extra-info": "Must be made of aluminum or steel", 
+        "id":14
+    },
+    {
+        "item": "milk jug",
+        "recyclable": "yes", 
+        "id":15
+    },
+    {
+        "item": "yogurt container",
+        "recyclable": "yes", 
+        "id":16
+    }, 
+    {
+        "item": "glass bottles",
+        "recyclable": "yes", 
+        "extra-info": "All colors are accepted", 
+        "id":17
+    }, 
+    {
+        "item": "cardboard egg carton",
+        "recyclable": "yes", 
+        "id":18
+    }, 
+    {
+        "item": "plastic",
+        "recyclable": "yes",
+        "extra-info": "Must be marked with a number 1-7", 
+        "id":19
+    }, 
+    {
+        "item": "paper towel roll",
+        "recyclable": "yes", 
+        "id":20
+    }, 
+    {
+        "item": "toilet paper roll",
+        "recyclable": "yes", 
+        "id":21
+    }, 
+    {
+        "item": "medicine bottle",
+        "recyclable": "yes", 
+        "extra-info": "You may recycle the container and the lid",
+        "id":22
+    }, 
+    {
+        "item": "book",
+        "recyclable": "yes",
+        "extra-info":"Covers are not recyclable and must be removed", 
+        "id":23
+    }, 
+    {
+        "item": "paper",
+        "recyclable": "yes", 
+        "id":24
+    }, 
+    {
+        "item": "cereal box",
+        "recyclable": "yes", 
+        "id":25
+    }, 
+    {
+        "item": "tissue box",
+        "recyclable": "yes", 
+        "extra-info":"Remove any plastic before recycling", 
+        "id":26
+    }, 
+    {
+        "item": "telephone book",
+        "recyclable": "yes", 
+        "id":27
+    }, 
+    {
+        "item": "foil",
+        "recyclable": "yes", 
+        "extra-info":"Please rinse and roll into a ball before recycling", 
+        "id":28
+    }, 
+    {
+        "item": "pie plate",
+        "recyclable": "yes", 
+        "extra-info":"Please rinse and roll into a ball before recycling", 
+        "id":29
+    }, 
+    {
+        "item": "cardboard",
+        "recyclable": "yes", 
+        "id":30
+    }, 
+    {
+        "item": "milk carton",
+        "recyclable": "yes", 
+        "id":31
+    }, 
+    {
+        "item": "juice carton",
+        "recyclable": "yes", 
+        "id":32
+    }, 
+    {
+        "item": "plastic bag",
+        "recyclable": "yes",
+        "extra-info":"Must be placed in a yellow 'Bag the bag' stuffer bag or dropped off at a plastic bag recycling location",
+        "id":33
+    }, 
+    {
+        "item": "dry cleaning bag",
+        "recyclable": "yes",
+        "extra-info":"Must be placed in a yellow 'Bag the bag' stuffer bag or dropped off at a plastic bag recycling location", 
+        "id":34
+    }, 
+    {
+        "item": "newspaper bag",
+        "recyclable": "yes",
+        "extra-info":"Must be placed in a yellow 'Bag the bag' stuffer bag or dropped off at a plastic bag recycling location", 
+        "id":35
+    }, 
+    {
+        "item": "produce bag",
+        "recyclable": "yes",
+        "extra-info":"Must be rinsed, and placed in a yellow 'Bag the bag' stuffer bag or dropped off at a plastic bag recycling location", 
+        "id":36
+    }, 
+    {
+        "item": "bread bag",
+        "recyclable": "yes",
+        "extra-info":"Must be placed in a yellow 'Bag the bag' stuffer bag or dropped off at a plastic bag recycling location", 
+        "id":37
+    }, 
+    {
+        "item": "shopping bag",
+        "recyclable": "yes",
+        "extra-info":"Must be placed in a yellow 'Bag the bag' stuffer bag or dropped off at a plastic bag recycling location", 
+        "id":38
+    }, 
+    {
+        "item": "ziploc bag",
+        "recyclable": "yes",
+        "extra-info":"Must be placed in a yellow 'Bag the bag' stuffer bag or dropped off at a plastic bag recycling location", 
+        "id":39
+    }, 
+    {
+        "item": "plastic wrap",
+        "recyclable": "yes",
+        "extra-info":"Must be rinsed, and placed in a yellow 'Bag the bag' stuffer bag or dropped off at a plastic bag recycling location",
+        "id":40
+    }, 
+    {
+        "item": "cellophane",
+        "recyclable": "yes",
+        "extra-info":"Must be placed in a yellow 'Bag the bag' stuffer bag or dropped off at a plastic bag recycling location", 
+        "id":41
+    },
+    {
+        "item": "plastic rings",
+        "recyclable": "yes",
+        "extra-info":"Must be placed in a yellow 'Bag the bag' stuffer bag or dropped off at a plastic bag recycling location", 
+        "id":42
+    }, 
+    {
+        "item": "shrink wrap",
+        "recyclable": "yes",
+        "extra-info":"Must be placed in a yellow 'Bag the bag' stuffer bag or dropped off at a plastic bag recycling location", 
+        "id":43
+    }, 
+    {
+        "item": "plastic bags",
+        "recyclable": "yes",
+        "extra-info":"Must be placed in a yellow 'Bag the bag' stuffer bag or dropped off at a plastic bag recycling location", 
+        "id":44
+    }, 
+    {
+        "item": "plastic bags",
+        "recyclable": "yes",
+        "extra-info":"Must be placed in a yellow 'Bag the bag' stuffer bag or dropped off at a plastic bag recycling location", 
+        "id":45
+    }, 
+    {
+        "item": "garbage",
+        "recyclable": "no", 
+        "id": 46 
+
+    }, 
+    {
+        "item": "grass",
+        "recyclable": "no", 
+        "id": 47
+    }, 
+    {
+        "item": "leaves",
+        "recyclable": "no",
+        "id": 48
+    }, 
+    {
+        "item": "clippings",
+        "recyclable": "no",
+        "id": 49
+    }, 
+    {
+        "item": "paint",
+        "recyclable": "no",
+        "id": 50
+    }, 
+    {
+        "item": "chenicals",
+        "recyclable": "no",
+        "id": 51
+    }, 
+    {
+        "item": "styrofoam",
+        "recyclable": "no",
+        "id": 52
+    }, 
+    {
+        "item": "pet waste",
+        "recyclable": "no",
+        "id": 53
+    }, 
+    {
+        "item": "light bulb",
+        "recyclable": "no",
+        "id": 54
+    }, 
+    {
+        "item": "battery",
+        "recyclable": "no",
+        "id": 55
+    }, 
+    {
+        "item": "batteries",
+        "recyclable": "no",
+        "id": 56
+    }, 
+    {
+        "item": "motor oil container",
+        "recyclable": "no",
+        "id": 57
+    }, 
+    {
+        "item": "aerosol can",
+        "recyclable": "no",
+        "id": 58
+    }, 
+    {
+        "item": "metal hanger",
+        "recyclable": "no",
+        "id": 59
+    }, 
+    {
+        "item": "dog food bag",
+        "recyclable": "no",
+        "id": 60
+    }, 
+    {
+        "item": "cat food bag",
+        "recyclable": "no",
+        "id":61
+    }, 
+    {
+        "item": "clothing",
+        "recyclable": "no",
+        "id":62
+    }, 
+    {
+        "item": "hose",
+        "recyclable": "no",
+        "id":63
+    }, 
+    {
+        "item": "snack bags",
+        "recyclable": "no",
+        "id":64
+    }, 
+    {
+        "item": "to go cup",
+        "recyclable": "no",
+        "id":65
+    }, 
+    {
+        "item": "cork",
+        "recyclable": "no",
+        "id":66
+    }, 
+    {
+        "item": "cup",
+        "recyclable": "no",
+        "id":67
+    }, 
+    {
+        "item": "straw",
+        "recyclable": "no",
+        "id":68
+    }, 
+    {
+        "item": "paper towel",
+        "recyclable": "no",
+        "id":69
+    }, 
+    {
+        "item": "plastic bags",
+        "recyclable": "no",
+        "id":70
+    }, 
+    {
+        "item": "razor",
+        "recyclable": "no",
+        "id":71
+    }, 
+    {
+        "item": "shipping bag",
+        "recyclable": "yes", 
+        "extra-info": "All stickers must be removed before placing in recycling bin",
+        "id":72
+    }, 
+    {
+        "item": "cd",
+        "recyclable": "no",
+        "id":73
+    }, 
+    {
+        "item": "dvd",
+        "recyclable": "no",
+        "id":74
+    }, 
+    {
+        "item": "food",
+        "recyclable": "no",
+        "id":75
+    }, 
+    {
+        "item": "to go containers",
+        "recyclable": "no",
+        "id":76
+    }, 
+    {
+        "item": "paper bags",
+        "recyclable": "yes",
+        "id":77
+    } 
+]
