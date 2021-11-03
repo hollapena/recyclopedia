@@ -48,8 +48,8 @@
     display:grid;
     grid-template-areas: 
     "text ."
-    "text bar"
-    "text button"
+    "text form"
+    "text form"
     "text .";
     padding-right:20px;
     align-items:center;
@@ -63,6 +63,11 @@
     line-height: 55px; 
     
 }
+#searchform{
+    grid-area:form;
+    display:grid;
+    grid-template-areas: "bar button"
+}
 
 #bar{
     grid-area:bar;
@@ -73,7 +78,7 @@
 }
 #submitbutton{
     grid-area:button;
-    width:100px;
+    width:50px;
     align-self:center;
 }
 

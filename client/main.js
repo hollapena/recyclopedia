@@ -1,23 +1,25 @@
 const searchForm = document.getElementById('searchform')
-const itemText = document.getElementById('bar').value
+const itemText = document.querySelector('#bar')
 const itemSubmit = document.getElementById('submitbutton')
 const recycleCity = document.getElementById('recyclecity').value
 const recycleState = document.getElementById('recyclestate').value
 const recycleSubmit = document.getElementById('recyclesubmit')
 
-console.log(itemText)
 
 // recycleSubmit.addEventListener('click', recycleLocations)
+searchForm.addEventListener('click', isRecyclable)
 
-// searchForm.addEventListener('submit', isRecyclable)
-
-// function isRecyclable(evt){
+function isRecyclable(evt){
+    evt.preventDefault()
+   console.log(itemText.value)
    
-//    axios.get(`http://localhost:4567/api/recyclables/${itemText}`)
-//    .then(res => {
-//        console.log(res.data)
-//    })
-// }
+   let text = itemText.value
+   axios.get(`http://localhost:4567/api/recyclables/${text}`)
+   .then(res => {
+       console.log(res.data)
+       console.log('it worked')
+   })
+}
 
 // import { apiKeys } from "../config.js";
 
