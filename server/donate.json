@@ -1,0 +1,20 @@
+[
+    {
+    "id":1,
+    "title":"Donate Your Bedding and Towels to an Animal Shelter",
+    "info":"Believe it or not animal shelters accept donations of blankets, sheets, and towels whether they are new or used! As long as they are clean and not completely falling apart, most shelters are grateful for these donations.",
+    "image":"https://images.unsplash.com/photo-1547104071-eb682ad5ea76?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=464&q=80"
+},
+{
+    "id":2,
+    "title":"Donate Your Old Toothbrushes and Toothpaste Tubes",
+    "info":"Wait!! Don't toss your toothbrush in that trashcan! Colgate has an awesome recycling program collaboration with TerraCycle! They accept old toothbrushes, toothpaste tubes, and floss containers! All you have to do is visit the colgate website at <a href='https://www.terracycle.com/en-US/brigades/colgate#@40.77027075200147:-95.93705549677736zoom:4'>TerraCycle.com</a>, print off a shipping label, pack them up, and ship them off!",
+    "image":"https://s3.amazonaws.com/tc-global-prod/uploaded_images/us/images/1440/original/Colgate-main-image_v1_us.jpg"
+},
+{
+    "id":3,
+    "title":"Donate Your Old Eyeglasses",
+    "info":"Lens Crafters, Pearle Vision, Lions Club, Goodwill, Walmart, and Sam's Club all accept eyeglass donations and pass them on to those in need around the globe! Not near one of these retailers? Well, you can also mail them in to <a href='https://vspglobal.com/cms/vspglobal-outreach/eyewear-donation.html'>VSP Vision Care</a>! All you have to do is visit the website, print a free shipping label, and mail them off!",
+    "image": "https://images.unsplash.com/photo-1616416684377-da79c412a281?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80"
+}
+]

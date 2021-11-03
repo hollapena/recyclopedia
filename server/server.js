@@ -4,6 +4,9 @@ const path = require('path')
 
 const app = express()
 
+//Connect to MongoDB
+const mongo = `mongodb+srv://peachykeen:${mongo_key}@recyclopedia-project.fry8o.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
+
 app.use(express.json())
 app.use(cors())
 
@@ -11,12 +14,10 @@ const ctrl = require('./controller')
 
 app.get('/api/recyclables/:name', ctrl.getRecyclables)
 
-app.get('/', function(req,res) {
-    res.sendFile(path.join(__dirname, "../client/client.html"))
-})
-app.get('/css', function (req,res) {
-    res.sendFile(path.join(__dirname, "../client/styles.css"))
-})
+app.get('/api/donate', ctrl.getDonation)
+app.post('/api/donate', ctrl.createDonation)
+app.put('/api/donate/:id', ctrl.updateDonation)
+app.delete('/api/donate/:id', ctrl.deleteDonation)
 
 const port = process.env.PORT || 4567
 
