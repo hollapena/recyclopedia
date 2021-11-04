@@ -9,8 +9,10 @@ const recycleSubmit = document.getElementById('recyclesubmit')
 
 // REUSE AREA
 const recycleModal = document.getElementsByClassName('bg-modal')
-const close = document.getElementsByClassName('.close')
-const displayContainer = document.getElementById('display-container')
+const modalContainer = document.getElementById('modalguts')
+const recycleClose = document.getElementById('closerecycle')
+const reuseContainer = document.getElementById('reuse-container')
+const recycleContainer = document.getElementById('recycle-container')
 const reuseButton = document.getElementById('reusebutton')
 const addDonationButton = document.getElementById('add-donation')
 const updateReuseBtn = document.getElementById('reuse-update-button')
@@ -26,7 +28,6 @@ const modalContributeImage=document.getElementById('new-donate-image')
 const modalContributeButton=document.getElementById('reuse-contribute-button')
 
 
-
 import { apiKeys } from "../config.js";
 // import { deleteDonation } from "../server/controller.js"
 
@@ -35,8 +36,11 @@ modalUpdateClose.addEventListener('click', () => {
 })
 updateReuseBtn.addEventListener('click', updateReuse)
 recycleSubmit.addEventListener('click', recycleLocations)
-searchForm.addEventListener('click', isRecyclable)
+searchForm.addEventListener('submit', isRecyclable)
 reuseButton.addEventListener('click', getDonations)
+recycleClose.addEventListener('click', () =>{
+    document.querySelector('.recycle-modal').style.display='none';
+})
 modalContributeButton.addEventListener('click', addDonation)
 addDonationButton.addEventListener('click', () => {
     document.querySelector('.reuse-contribute-modal').style.display='flex';
@@ -53,17 +57,59 @@ modalContributeClose.addEventListener('click', () => {
 // })
 
 
+// function isRecyclable(evt){
+//     evt.preventDefault()
+//    console.log(itemText.value)
+   
+//    let text = itemText.value
+//    axios.get(`http://localhost:4567/api/recyclables/${text}`)
+//    .then(res => {
+
+//        console.log(res.data)
+//        console.log('it worked')
+//    })
+// }
+
 function isRecyclable(evt){
     evt.preventDefault()
-   console.log(itemText.value)
-   
-   let text = itemText.value
-   axios.get(`http://localhost:4567/api/recyclables/${text}`)
-   .then(res => {
+    let query = itemText.value
+    console.log(query)
+    axios.get(`https://api.earth911.com/earth911.searchMaterials?api_key=${apiKeys.recycle_api_key}&query=${query}`)
+    .then((res) => {
+        modalContainer.innerHTML=''
+        console.log(res.data)
+        let data = res.data
+        let array=data.result
+        console.log(array)
+        let truecount=0
+        for(let i = 0; i < array.length; i++){
+            let newArr = array[i]
+            let newDesc = String(newArr.description.toLowerCase())
+            let newQuery = String(query.toLowerCase())
+            let check = newDesc.includes(newQuery)
+            console.log(check)
+            if(check === true){
+                const {description,material_id} = array[i]
+            let modalGuts = document.createElement('div')
 
-       console.log(res.data)
-       console.log('it worked')
-   })
+            modalGuts.innerHTML = `<h2 class="modal-title">Congratulations! <br> ${description} is recyclable!</h2>
+            <p class="modal-info">To find out where to recycle ${query} visit the recycle tab!</p>`
+    
+            modalcontainer.append(modalGuts)
+
+            truecount++
+
+            }
+        }
+            if(truecount=0){
+            let modalGuts = document.createElement('div')
+
+            modalGuts.innerHTML = `<h2 class="modal-title">Aww Man! ${query} isn't recyclable!</h2>`
+
+            modalContainer.append(modalGuts)
+            }
+        document.querySelector('.recycle-modal').style.display='flex';
+    })
 }
 
 function getDonations(evt){
@@ -71,7 +117,7 @@ function getDonations(evt){
    
    axios.get(`http://localhost:4567/api/donate`)
    .then(res => {
-       displayContainer.innerHTML=''
+       reuseContainer.innerHTML=''
        for(let i=0; i<res.data.length; i++){
            newDonation(res.data[i])
        }
@@ -92,7 +138,7 @@ function deleteDonation(id){
     let refId= id
     axios.delete(`http://localhost:4567/api/donate/${refId}`)
     .then(res => {
-        displayContainer.innerHTML=''
+        reuseContainer.innerHTML=''
         for(let i=0; i<res.data.length; i++){
             newDonation(res.data[i])
         }
@@ -122,7 +168,7 @@ function addDonation(){
     axios.post(`http://localhost:4567/api/donate`,body)
     .then((res) => {
 
-    displayContainer.innerHTML=''
+    reuseContainer.innerHTML=''
        for(let i=0; i<res.data.length; i++){
            newDonation(res.data[i])
        }
@@ -149,7 +195,7 @@ function newDonation(res){
     <button id="${id}" class="donation-update">Update</button>
     <button id="${id}" class="donation-delete">Delete</button>`
     
-    displayContainer.append(donation)
+    reuseContainer.append(donation)
 
 }
 
@@ -174,7 +220,7 @@ function updateReuse(id){
     axios.put(`http://localhost:4567/api/donate/${refId}`,body)
     .then((res) => {
 
-    displayContainer.innerHTML=''
+    reuseContainer.innerHTML=''
        for(let i=0; i<res.data.length; i++){
            newDonation(res.data[i])
        }
@@ -194,7 +240,7 @@ function updateReuse(id){
 
 function recycleLocations(evt){
     evt.preventDefault()
-    displayContainer.innerHTML=''
+    recycleContainer.innerHTML=''
     let zip = +recycleZip.value
     console.log(zip)
     axios.get(`https://api.earth911.com/earth911.getPostalData?api_key=${apiKeys.recycle_api_key}&country=US&postal_code=${zip}`)
@@ -254,6 +300,6 @@ for(let i = 0; i<arr.length; i++){
     <h3 class="location-phone">${phone}</h3>
     <a href="${url}" class="location-url">${name}</a>`
     
-    displayContainer.append(recyclingCenter)
+    recycleContainer.append(recyclingCenter)
 }
 }

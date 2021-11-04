@@ -10,13 +10,24 @@
     <title>Recyclopedia Home</title>
 </head>
 <body>
+    <div id="top"></div>
 <section id="navbar">
     <h1 id="title" ><img src="https://cdn1.iconfinder.com/data/icons/science-technology-outline-24-px/24/leaf_tree_plane._nature_leaves_-26.png" alt="leaf logo"/> Recyclopedia</h1>
-    <a class="navlink" id="homelink" href="#navbar">Home</a>
-    <a class="navlink" id="contributelink" href="#three-rs">Discover</a>
-    <a class="navlink" id="reducelink" href="#contribute">Contribute</a>
-    <a class="navlink" id="reuselink" href="#about-us">About Us</a>
+    <a class="navlink" id="homelink" href="#top">Home</a>
+    <div class="dropdown">
+        <a class="navlink" class="dropbtn">Discover
+        </a>
+        <div class="dropdown-content">
+            <a class="dropdwn-nav" href="#reduce-top">Reduce</a>
+            <a class="dropdwn-nav" href="#reuse-top">Reuse</a>
+            <a class="dropdwn-nav" href="#recycle-top">Recycle</a>
+        </div>
+    </div>
+    <a class="navlink" id="contributelink" href="#contribute-top">Contribute</a>
+    <a class="navlink" id="aboutuslink" href="#about-us-top">About Us</a>
 </section>
+
+<section id="body-section">
 
 <section id="photobar">
     <div id="search">
@@ -25,49 +36,53 @@
         </h2>
         <form id="searchform">
         <input id="bar" type="text" placeholder="What are you trying to recycle?">
-        <button id="submitbutton"><img src="https://cdn3.iconfinder.com/data/icons/arrow-outline-8/32/right-36.png" alt="arrow"></button>
+        <a href="#recycle"><button id="submitbutton"><img src="https://cdn3.iconfinder.com/data/icons/arrow-outline-8/32/right-36.png" alt="arrow"></button></a>
         </form>
     </div>
 </section>
 
 <section id="three-rs">
-    <h2 id="head">Today I want to:</h2>
-
+<div id="reduce-top"></div>
     <section id="reduce">
-        <button id="reducebutton">
-            <img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_share-200.png" alt="arrow"/>
-            <h2>Reduce</h2>
-        </button>
-        <ul>
-            <li>Find ways to reduce consumption</li>
-            <li>Find links to waste reducing products</li>
-        </ul>
+        <h2 class="headings" id="reduceheading">#Reduce</h2>
+        <h1 class="titles" id="reducetitle">Trash Stinks, <br> &nbsp;&nbsp; Let's Make Less</h1>
+        <img id="reduceimage" src="https://cdn.dribbble.com/users/427368/screenshots/5472045/media/2e726bdb1710d1a6b6acb598df1cb229.png?compress=1&resize=800x600" alt="trashcan with trash">
+        
+        <div id="reducelinks" class="links">
+            <h2 id="reducelinkstitle">Check Out These Awesome Ways to <br>#Reduce Your Consumption</h2>
+            <a class="link" href="https://believe.earth/en/how-to-reduce-energy-consumption/">Believe Earth's Guide to Reducing Energy Consumption</a><br>
+            <a class="link" href="https://www.atidymind.co.uk/easy-ways-to-simplify-your-life-and-reduce-consumption/">A Tidy Mind Suggests Tips for Reducing Consumption at Home</a><br>
+            <a class="link" href="https://liveslowrunfar.com/blog/20-ways-save-money-(and-reduce-consumption)/">Live Slow Run Far's Top 20 Ways to Save Money and Reduce Consumption</a><br>
+            <a class="link" href="https://soapboxie.com/social-issues/reduce-everything">Soap Boxie Shows us 40 Things We Can Reduce To Help the Environment</a><br>
+            <h2>Have Something to Add? Be sure to visit our Contribute tab to submit it to the list! </h2>
+        </div>
     </section>
-
+    <div id="reuse-top"></div>
     <section id="reuse">
-            <button id="reusebutton">
-                <img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_share-200.png" alt="arrow"/>
-                <h2>Reuse</h2>
+        <h2 class="headings" id="reuseheading">#Reuse</h2>
+        <h1 class="titles" id="reusetitle">Give <br>A Little <br> Bit</h1>
+        <img id="reuseimage" src="https://media.istockphoto.com/vectors/charity-and-donate-of-clothing-for-poor-people-flat-vector-isolated-vector-id1255783655?k=20&m=1255783655&s=170667a&w=0&h=j6c_AF3_5iygZzjv_9an2zt59dLNTVuVyabP-fxK8og=" alt="clothing donation picture">
+
+            <button id="reusebutton"><a id="donation-link" href="#reuse-container">
+                Donation Opportunities</a>
             </button>
-            <ul>
-                <li>Discover ways to donate your unwanted items</li>
-                <li>Find inspiration to reuse items in unexpected ways</li>
-            </ul>
+            <section id="reuse-container"></section>
     </section>
+    <div id="recycle-top"></div>
     <section id="recycle">
-        <button id="recyclebutton">
-            <img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_share-200.png" alt="arrow"/>
-            <h2>Recycle</h2>
-        </button>
+        <h2 class="headings" id="recycleheading">#Recycle</h2>
+        <h1 class="titles" id="recycletitle">What Goes Around Comes Around</h1>
+            <img id="recycleimage" src="https://media.istockphoto.com/vectors/recycle-bins-for-plastic-paper-glass-vector-icons-in-flat-style-vector-id1138615484?k=20&m=1138615484&s=612x612&w=0&h=L9faboYxMJTvIWV7o-JciKdMmm6tBI4Md_UVuszQQdA=" alt="recycling bins"/>
         <ul>
             <!-- <li>Learn your local recycling guidelines</li>
             <li>How to recycle "other" household items</li> -->
-            <li>Find your nearest recycling locations</li>
+            <li>Let's Find Your Nearest Recycling Locations</li>
         </ul>
         <form>
             <input id="recyclezip" type="number" placeholder="Enter Your Zip Code">
             <button id="recyclesubmit">Submit</button>
         </form>
+        <section id="recycle-container"></section>
     </section> 
 </section>
 <div class="reuse-update-modal">
@@ -81,11 +96,13 @@
         <div class="reuse-update-close">+</div>
     </div>
 </div>
-<section id="display-container"></section>
 <div class="recycle-modal">
-    <div class="recycle-modal-content">
-        <div class="recycle-close">+</div>
-    </div>
+        <div id="modalcontainer" class="recycle-modal-content">
+            <div id="modalguts"></div>
+            <!-- <img class="modal-image" src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41393-019-0246-8/MediaObjects/41393_2019_246_Fig1_HTML.png" alt="recycle image"> -->
+            <div id="closerecycle" class="recycle-close">+</div>
+        </div>
+</div>
 </div>
 <div class="reuse-contribute-modal">
     <div class="reuse-modal-content">
@@ -97,12 +114,15 @@
         <div class="reuse-close">+</div>
     </div>
 </div>
+<div id="contribute-top"></div>
 <section id="contribute">
     <button id="add-donation">Add a Reuse Idea</button>
     <button id="add-alternative">Add a Reduce Idea</button>
     <button id="add-recycle-info">Add Recycling Information</button>
 </section>
+<div id="about-us-top"></div>
 <section id="about-us"></section>
+</section>
     <script src="../node_modules/axios/dist/axios.min.js"></script>
     <script src="./main.js" type="module"></script>
     <script src="../config.js" type="module"></script>
