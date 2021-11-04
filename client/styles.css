@@ -413,63 +413,91 @@ html{
     grid-area:recycle;
     text-align:center;
 }
-ul{
-    font-size:large;
-    text-align:center;
-    list-style-position: inside;
-}
 #contribute{
-    grid-area:contribute;
-    height:fit-content;
-    min-height:100%;
-    width:100vw;
-    margin-top:150px;
-    display:grid;
-    align-items:center;
-    justify-items:center;
-    height:400px;
+    height:100vh;
+    margin-top:15%;
     display:grid;
     grid-template-areas: 
-    "title title"
-    "text reusebtn"
-    "text email";
+    "headings headings ."
+    "titles titles texts"
+    "buttonone buttontwo images"
+}
+#contributeheading{
+    grid-area:headings;
+    font-size:3vw;
+    margin-left:40px;
 }
 #contributetitle{
-    grid-area:title;
+    grid-area:titles;
     font-size:8vw;
-    margin-top:-40px;
-    width:max-content;
-    text-align:right;
-    z-index: 1;
+    margin-top:-50px;
+    margin-left:60px;
 }
 #text{
-    grid-area:text;
-    width:50%;
+    grid-area:texts;
+    width:550px;
+    font-size:30px;
+    margin-top:-50px;
+    margin-left:50px;
+    text-align:left;
+}
+#add-donation{
+    grid-area:buttonone;
+    height:80px;
+    width:200px;
+    border-radius:50px;
+    border:none;
+    background-color:#73b599;
+    color:black;
     font-size:large;
+    font-weight:bolder;
+    margin-top:-90px;
+    margin-left:60px;
 }
 #add-recycle-info{
-    grid-area:email;
-    height: 200px;
+    grid-area:buttontwo;
+    height:80px;
     width:200px;
-    border-radius:50%;
-}
-
-#add-donation{
-    grid-area:reusebtn;
-    height: 200px;
-    width:200px;
+    border-radius:50px;
+    border:none;
+    background-color:#73b599;
+    color:black;
     font-size:large;
-    border-radius:50%;
+    font-weight:bolder;
+    margin-top:-90px;
 }
-#add-alternative{
-    grid-area:reducebtn;
-    height: 200px;
-    width:200px;
-    border-radius:50%;
+#contributeimage{
+    grid-area:images;
+    margin-top:-250px;
 }
 
 #about-us{
+    height:100vh;
     grid-area:aboutus;
+    margin-top:12vh;
+    display:grid;
+    grid-template-areas: 
+    "heading heading"
+    "title body"
+}
+#aboutmeheading{
+    grid-area:heading;
+    font-size:3vw;
+    margin-left:50px;
+}
+#aboutmetitle{
+    grid-area:title;
+    font-size:11vw;
+    margin-top:-80px;
+    margin-left:20px;
+}
+#aboutmebody{
+    grid-area:body;
+    font-size:30px;
+    width:700px;
+    text-align:left;
+    margin-top:-150px;
+    margin-right:50px;
 }
 
 .recycle-modal{
