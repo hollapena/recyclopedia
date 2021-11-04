@@ -71,17 +71,16 @@
     <div id="recycle-top"></div>
     <section id="recycle">
         <h2 class="headings" id="recycleheading">#Recycle</h2>
-        <h1 class="titles" id="recycletitle">What Goes Around Comes Around</h1>
+        <h1 class="titles" id="recycletitle">What Goes <br>Around<br> Comes Around</h1>
             <img id="recycleimage" src="https://media.istockphoto.com/vectors/recycle-bins-for-plastic-paper-glass-vector-icons-in-flat-style-vector-id1138615484?k=20&m=1138615484&s=612x612&w=0&h=L9faboYxMJTvIWV7o-JciKdMmm6tBI4Md_UVuszQQdA=" alt="recycling bins"/>
-        <ul>
-            <!-- <li>Learn your local recycling guidelines</li>
-            <li>How to recycle "other" household items</li> -->
-            <li>Let's Find Your Nearest Recycling Locations</li>
-        </ul>
+        <div id="recyclingcenterlocator">
+            <p>Let's Find Your Nearest <br>Recycling Locations</p>
         <form>
-            <input id="recyclezip" type="number" placeholder="Enter Your Zip Code">
+            <input id="recyclezip" type="number" placeholder="Enter Your Zip Code"><br>
             <button id="recyclesubmit">Submit</button>
         </form>
+        </div>
+        <img id="arrowimage" src="https://cdn4.iconfinder.com/data/icons/feather/24/arrow-down-circle-126.png">
         <section id="recycle-container"></section>
     </section> 
 </section>
@@ -116,12 +115,20 @@
 </div>
 <div id="contribute-top"></div>
 <section id="contribute">
+    <h1 id="contributetitle">Contribute</h1>
+    <p id="text">I think collectively we have far greater knowledge than we have independently. That's why I wanted to open this site up for others to contribute to. My "Add reuse idea" button only adds the idea for a short time, but I'm working on fixing that! In the mean time be sure to send an email with anthing you think might be helpful if it were added!</p>
     <button id="add-donation">Add a Reuse Idea</button>
-    <button id="add-alternative">Add a Reduce Idea</button>
-    <button id="add-recycle-info">Add Recycling Information</button>
+    <!-- <button id="add-alternative">Share A Link</button> -->
+    <button id="add-recycle-info">Email Your Idea</button>
 </section>
 <div id="about-us-top"></div>
-<section id="about-us"></section>
+<section id="about-us">
+    <div id="message">
+    <h1 id="aboutmeintro">Hi, There!</h1>
+    <h2 id="aboutmebody">I'm just your friendly neighborhood web developer that got fed up with the recycling system in her town. So I decided to do something about it!<br> Ok, actually this idea was hatched over a game night with some friends. It all started as a discussion...ahem*debate about whether you could recycle paper towels or not. That led to discussions about how many full batches of recycling are thrown out because of just a few wrongly recycled pieces. Well, I thought it might help to have a place to go for some of those more questionable items, and for general info about the three R's! </h2>
+    <h2 id="aboutmecloser">That's all I have for now, but feel free to stop by the contribution page, send an idea or just shoot over an e-mail...until next time neighbors, Stay Smart!</h2>
+    </div>
+</section>
 </section>
     <script src="../node_modules/axios/dist/axios.min.js"></script>
     <script src="./main.js" type="module"></script>

@@ -26,6 +26,7 @@ const modalContributeTitle=document.getElementById('new-donate-title')
 const modalContributeInfo=document.getElementById('new-donate-info')
 const modalContributeImage=document.getElementById('new-donate-image')
 const modalContributeButton=document.getElementById('reuse-contribute-button')
+const emailBtn = document.getElementById('add-recycle-info')
 
 
 import { apiKeys } from "../config.js";
@@ -48,6 +49,7 @@ addDonationButton.addEventListener('click', () => {
 modalContributeClose.addEventListener('click', () => {
     document.querySelector('.reuse-contribute-modal').style.display='none';
 })
+emailBtn.addEventListener('click', openEmail)
 
 // addReduceButton.addEventListener('click', () => {
 //     document.querySelector('.reuse-update-modal').style.display='flex';
@@ -69,6 +71,10 @@ modalContributeClose.addEventListener('click', () => {
 //        console.log('it worked')
 //    })
 // }
+
+function openEmail(){
+    window.open(`mailto:${apiKeys.email}`)
+}
 
 function isRecyclable(evt){
     evt.preventDefault()
@@ -95,7 +101,7 @@ function isRecyclable(evt){
             modalGuts.innerHTML = `<h2 class="modal-title">Congratulations! <br> ${description} is recyclable!</h2>
             <p class="modal-info">To find out where to recycle ${query} visit the recycle tab!</p>`
     
-            modalcontainer.append(modalGuts)
+            modalContainer.append(modalGuts)
 
             truecount++
 

@@ -10,6 +10,7 @@ html{
     "contribute"
     "aboutus";
 }
+
 #navbar{
     grid-area:navbar;
     background-color:white;
@@ -157,23 +158,6 @@ html{
     align-self:center;
 }
 
-#recycle{
-    grid-area:recycle;
-    height:100vh;
-    width:100vw;
-    overflow:scroll;
-}
-
-/* #three-rs{
-    display:grid;
-    grid-template-areas: 
-    "head head head"
-    "reduce reuse recycle";
-    align-items: start;
-    justify-items:center;
-    height:80vh; */
-/* } */
-
 #reduce{
     grid-area:reduce;
     padding-top:15vh;
@@ -205,17 +189,17 @@ html{
 #reducetitle{
     grid-area:title;
     font-size:8vw;
-    margin-top:-50px;
+    margin-top:-120px;
     width:max-content;
     text-align:left;
 }
 #reducelinks{
     grid-area:links;
     width:65%;
-    height:150%;
+    height:130%;
     justify-self:end;
     margin-right:175px;
-    margin-top:-300px;
+    margin-top:-420px;
     padding-bottom:100px;
     background-color:rgb(230, 230, 230);
     padding:20px;
@@ -298,7 +282,124 @@ html{
     flex-wrap:wrap;
     justify-content:space-around;
 
+}
 
+#recycle{
+    grid-area:recycle;
+    height:fit-content;
+    width:100vw;
+    padding-top:15vh;
+    margin-bottom:150px;
+    width:100vw;
+    text-align:center;
+    display:grid;
+    grid-template-areas: 
+    "heading ."
+    "locator title "
+    "arrow image "
+    "container container"
+   
+
+}
+#recycletitle{
+    grid-area:title;
+    font-size:8vw;
+    margin-top:-40px;
+    width:max-content;
+    text-align:right;
+    z-index: 1;
+}
+#recycleheading{
+    grid-area:heading;
+    font-size:3vw;
+    margin-left:-150px;
+    line-height:0px;
+    z-index: 3;
+
+}
+#recyclingcenterlocator{
+    grid-area:locator;
+    font-size: 3vw;
+    background-color:rgb(230, 230, 230);
+    border-radius:20px;
+    box-shadow:2px 2px 2px gray;
+    width:300px;
+    margin-left:60px;
+    margin-top:30px;
+    height:400px;
+
+}
+#recyclezip{
+    width:250px;
+    height:30px;
+    font-size:large;
+    text-align:center;
+}
+#recyclesubmit{
+    height:40px;
+    width:100px;
+    border-radius:50px;
+    border:none;
+    background-color:white;
+    color:black;
+    font-size:large;
+    font-weight:bolder;
+    box-shadow:2px 2px 2px gray;
+}
+#arrowimage{
+    grid-area:arrow;
+    justify-self:center;
+    margin-right:55px;
+    margin-top:-45px;
+}
+#recycleimage{
+    grid-area:image;
+    margin-top:-230px;
+    width:800px;
+
+}
+#recycle-container{
+    grid-area:container;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+}
+
+.recycling-center-display{
+    width:400px;
+    background-color:rgba(214, 214, 214, 0.672);
+    display:grid;
+    grid-template-areas: 
+    "name"
+    "address"
+    "city"
+    "hours"
+    "phone"
+    "url";
+    justify-items:center;
+    align-items:center;
+    padding:20px;
+    border-radius:20px;
+    text-align:center;
+    margin-top: 20px;
+}
+.location-name{
+    grid-area:name;
+}
+.location-address{
+    grid-area:address;
+}
+.location-city{
+    grid-area:city;
+}
+.location-hours{
+    grid-area:hours;
+}
+.location-phone{
+    grid-area:phone;
+}
+.location-url{
+    grid-area:url;
 }
 .link{
     color:black;
@@ -319,19 +420,45 @@ ul{
 }
 #contribute{
     grid-area:contribute;
+    height:fit-content;
+    min-height:100%;
+    width:100vw;
+    margin-top:150px;
     display:grid;
-    grid-template-areas: 
-    "reusebtn reducebtn recyclebtn";
     align-items:center;
     justify-items:center;
-    background-color:rgba(125, 172, 109, 0.796);
     height:400px;
+    display:grid;
+    grid-template-areas: 
+    "title title"
+    "text reusebtn"
+    "text email";
+}
+#contributetitle{
+    grid-area:title;
+    font-size:8vw;
+    margin-top:-40px;
+    width:max-content;
+    text-align:right;
+    z-index: 1;
+}
+#text{
+    grid-area:text;
+    width:50%;
+    font-size:large;
+}
+#add-recycle-info{
+    grid-area:email;
+    height: 200px;
+    width:200px;
+    border-radius:50%;
 }
 
 #add-donation{
     grid-area:reusebtn;
     height: 200px;
     width:200px;
+    font-size:large;
     border-radius:50%;
 }
 #add-alternative{
@@ -340,15 +467,15 @@ ul{
     width:200px;
     border-radius:50%;
 }
-#add-recycle-info{
-    grid-area:recyclebtn;
-    height: 200px;
-    width:200px;
-    border-radius:50%;
+
+#about-us{
+    grid-area:aboutus;
 }
+
 .recycle-modal{
     width:100%;
     height:cover;
+    min-height:100%;
     background-color: rgba(0,0,0,0.7);
     position:absolute;
     top:0;
@@ -481,52 +608,6 @@ ul{
     width:60%;
     display:block;
     margin:15px auto;
-
-}
-
-#recycle-container{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:space-around;
-}
-
-.recycling-center-display{
-    width:400px;
-    background-color:rgba(214, 214, 214, 0.672);
-    display:grid;
-    grid-template-areas: 
-    "name"
-    "address"
-    "city"
-    "hours"
-    "phone"
-    "url";
-    justify-items:center;
-    align-items:center;
-    padding:20px;
-    border-radius:20px;
-    text-align:center;
-    margin-top: 20px;
-    grid-gap:20px;
-
-}
-.location-name{
-    grid-area:name;
-}
-.location-address{
-    grid-area:address;
-}
-.location-city{
-    grid-area:city;
-}
-.location-hours{
-    grid-area:hours;
-}
-.location-phone{
-    grid-area:phone;
-}
-.location-url{
-    grid-area:url;
 }
 
 .reuse-contribute-modal{
