@@ -5,7 +5,7 @@ const path = require('path')
 const app = express()
 
 //Connect to MongoDB
-const mongo = `mongodb+srv://peachykeen:${mongo_key}@recyclopedia-project.fry8o.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
+// const mongo = `mongodb+srv://peachykeen:${mongo_key}@recyclopedia-project.fry8o.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 
 app.use(express.json())
 app.use(cors())

@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="/css"> -->
     <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="https://cdn1.iconfinder.com/data/icons/science-technology-outline-24-px/24/leaf_tree_plane._nature_leaves_-26.png">
     <title>Recyclopedia Home</title>
 </head>
 <body>
 <section id="navbar">
     <h1 id="title" ><img src="https://cdn1.iconfinder.com/data/icons/science-technology-outline-24-px/24/leaf_tree_plane._nature_leaves_-26.png" alt="leaf logo"/> Recyclopedia</h1>
-    <a id="homelink">Home</a>
-    <a id="contributelink">Contribute</a>
-    <a id="reducelink">Reduce</a>
-    <a id="reuselink">Reuse</a>
+    <a class="navlink" id="homelink" href="#navbar">Home</a>
+    <a class="navlink" id="contributelink" href="#three-rs">Discover</a>
+    <a class="navlink" id="reducelink" href="#contribute">Contribute</a>
+    <a class="navlink" id="reuselink" href="#about-us">About Us</a>
 </section>
 
 <section id="photobar">
@@ -30,11 +31,11 @@
 </section>
 
 <section id="three-rs">
-<h2 id="head">Today I want to:</h2>
+    <h2 id="head">Today I want to:</h2>
 
     <section id="reduce">
         <button id="reducebutton">
-            <a href="./reduce.html"><img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_share-200.png" alt="arrow"/></a>
+            <img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_share-200.png" alt="arrow"/>
             <h2>Reduce</h2>
         </button>
         <ul>
@@ -44,38 +45,61 @@
     </section>
 
     <section id="reuse">
-        <button id="reusebutton">
-            <a href="./reuse.html"><img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_share-200.png" alt="arrow"/></a>
-            <h2>Reuse</h2>
-        </button>
-        <ul>
-            <li>Discover ways to donate your unwanted items</li>
-            <li>Find inspiration to reuse items in unexpected ways</li>
-        </ul>
+            <button id="reusebutton">
+                <img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_share-200.png" alt="arrow"/>
+                <h2>Reuse</h2>
+            </button>
+            <ul>
+                <li>Discover ways to donate your unwanted items</li>
+                <li>Find inspiration to reuse items in unexpected ways</li>
+            </ul>
     </section>
 
-<section id="recycle">
-    <button id="recyclebutton">
-        <a href="./recycle.html">
-        <img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_share-200.png" alt="arrow"/></a>
-        <h2>Recycle</h2>
-    </button>
-    <ul>
-        <li>Learn your local recycling guidelines</li>
-        <li>How to recycle "other" household items</li>
-        <li>Find your nearest recycling locations</li>
-    </ul>
-    <form>
-        <input id="recyclecity" type="text" placeholder="Enter City Here">
-        <input id="recyclestate" type="text" placeholder="State Abbreviation">
-        <button id="recyclesubmit">Submit</button>
-    </form>
-</section> 
-<div class="bg-modal">
-    <div class="modal-content">
-        <div class="close">+</div>
+    <section id="recycle">
+        <button id="recyclebutton">
+            <img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_share-200.png" alt="arrow"/>
+            <h2>Recycle</h2>
+        </button>
+        <ul>
+            <!-- <li>Learn your local recycling guidelines</li>
+            <li>How to recycle "other" household items</li> -->
+            <li>Find your nearest recycling locations</li>
+        </ul>
+        <form>
+            <input id="recyclezip" type="number" placeholder="Enter Your Zip Code">
+            <button id="recyclesubmit">Submit</button>
+        </form>
+    </section> 
+</section>
+<div class="reuse-update-modal">
+    <div class="reuse-update-modal-content">
+        <h1>Update Donation Information</h1>
+        <input id="reuse-id">
+        <input class="modal-input" id="update-donate-title" type="text" placeholder="Title">
+        <textarea class="modal-input" id="update-donate-info" placeholder="Information About This Reuse Strategy"></textarea>
+        <input class="modal-input" id="update-donate-image" type="text" placeholder="Image URL (optional)">
+        <button id="reuse-update-button">Submit</button>
+        <div class="reuse-update-close">+</div>
     </div>
 </div>
+<section id="donation-container"></section>
+<section id="recycle-container"></section>
+<div class="recycle-modal">
+    <div class="recycle-modal-content">
+        <div class="recycle-close">+</div>
+    </div>
+</div>
+<div class="reuse-contribute-modal">
+    <div class="reuse-modal-content">
+        <div class="reuse-close">+</div>
+    </div>
+</div>
+<section id="contribute">
+    <button id="add-donation">Add a Reuse Idea</button>
+    <button id="add-alternative">Add a Reduce Idea</button>
+    <button id="add-recycle-info">Add Recycling Information</button>
+</section>
+<section id="about-us"></section>
     <script src="../node_modules/axios/dist/axios.min.js"></script>
     <script src="./main.js" type="module"></script>
     <script src="../config.js" type="module"></script>

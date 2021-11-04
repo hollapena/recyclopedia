@@ -1,4 +1,6 @@
-
+html{
+    scroll-behavior:smooth;
+}
 #navbar{
     display:grid;
     grid-template-columns: 4fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr;
@@ -8,6 +10,19 @@
     align-items: center;
     margin-top:-30px;
 }
+.navlink{
+    background-color:white;
+    color:black;
+    text-decoration:none;
+    height:50px;
+    width:80px;
+    line-height:50px;
+    text-align:center;
+    transition: background-color 0.45s ease-out 50ms;
+  }
+  .navlink:hover{ 
+    background-color:#e4e4e4;
+  }
 #title{
     grid-column:1/2;
     font-size:4vw;
@@ -37,7 +52,7 @@
     display:grid;
     grid-template-areas: 
     ". searchbar";
-    margin-top:10px;
+    margin-top:50px;
     align-items:center;
 }
 
@@ -85,8 +100,8 @@
 #three-rs{
     display:grid;
     grid-template-areas: 
-    "head"
-    "reduce, reuse, recycle";
+    "head head head"
+    "reduce reuse recycle";
     align-items: start;
     justify-items:center;
     height:80vh;
@@ -94,27 +109,61 @@
 #head{
     grid-area:head;
 }
+#reducebutton{
+    border-radius:20px;
+}
 #reduce{
     grid-area:reduce;
     text-align:center;
-    border-radius:50%;
+}
+#reusebutton{
+    border-radius:20px;
 }
 #reuse{
     grid-area:reuse;
     text-align:center;
-    border-radius:50%;
+}
+#recyclebutton{
+    border-radius:20px;
 }
 #recycle{
     grid-area:recycle;
     text-align:center;
-    border-radius:50%;
 }
 ul{
     font-size:large;
     text-align:center;
     list-style-position: inside;
 }
-.bg-modal{
+#contribute{
+    display:grid;
+    grid-template-areas: 
+    "reusebtn reducebtn recyclebtn";
+    align-items:center;
+    justify-items:center;
+    background-color:rgba(125, 172, 109, 0.796);
+    height:400px;
+}
+
+#add-donation{
+    grid-area:reusebtn;
+    height: 200px;
+    width:200px;
+    border-radius:50%;
+}
+#add-alternative{
+    grid-area:reducebtn;
+    height: 200px;
+    width:200px;
+    border-radius:50%;
+}
+#add-recycle-info{
+    grid-area:recyclebtn;
+    height: 200px;
+    width:200px;
+    border-radius:50%;
+}
+.recycle-modal{
     width:100%;
     height:100%;
     background-color: rgba(0,0,0,0.7);
@@ -125,7 +174,7 @@ ul{
     align-items:center;
     display:none;
 }
-.modal-content{
+.recycle-modal-content{
     width:300px;
     height:300px;
     background-color:rgba(255, 255, 255,1);
@@ -134,11 +183,149 @@ ul{
     padding:20px;
     position:relative;
 }
-.close{
+.recycle-close{
     position:absolute;
     top: 0;
     right:14px;
     font-size:45px;
     transform:rotate(45deg);
     cursor:pointer;
+}
+#donation-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+}
+.donation-display{
+    width:400px;
+    background-color:rgba(214, 214, 214, 0.672);
+    display:grid;
+    grid-template-areas: 
+    "title title"
+    "info info"
+    "image image"
+    "update delete";
+    justify-items:center;
+    align-items:center;
+    padding:20px;
+    border-radius:20px;
+    text-align:center;
+    margin-top: 20px;
+    grid-gap:20px;
+}
+.donation-title{
+    grid-area:title;
+    font-size: 3vw;
+    margin:0;
+}
+.donation-info{
+    grid-area:info;
+}
+.donation-image{
+    grid-area:image;
+    width:300px;
+    height: 300px;
+    object-fit:cover;
+    align-self:end;
+}
+.donation-update{
+    grid-area:update;
+    height:35px;
+    width:90px;
+    border-radius:10px;
+    align-self:end;
+    background-color:white;
+}
+.donation-delete{
+    grid-area:delete;
+    height:35px;
+    width:90px;
+    border-radius:10px;
+    align-self:end;
+    background-color:white;
+}
+.reuse-update-modal{
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.7);
+    position:fixed;
+    top:0;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    display:none;
+}
+.reuse-update-modal-content{
+    width:500px;
+    height:300px;
+    background-color:rgba(255, 255, 255,1);
+    border-radius:20px;
+    text-align:center;
+    padding:20px;
+    position:relative;
+}
+.reuse-update-close{
+    position:absolute;
+    top: 0;
+    right:14px;
+    font-size:45px;
+    transform:rotate(45deg);
+    cursor:pointer;
+}
+#reuse-update-button{
+    height:35px;
+    width:90px;
+    border-radius:10px;
+    background-color:rgba(125, 172, 109, 0.796);
+}
+.modal-input{
+    width:60%;
+    display:block;
+    margin:15px auto;
+
+}
+
+#recycle-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+}
+
+.recycling-center-display{
+    width:400px;
+    background-color:rgba(214, 214, 214, 0.672);
+    display:grid;
+    grid-template-areas: 
+    "name"
+    "address"
+    "city"
+    "hours"
+    "phone"
+    "url";
+    justify-items:center;
+    align-items:center;
+    padding:20px;
+    border-radius:20px;
+    text-align:center;
+    margin-top: 20px;
+    grid-gap:20px;
+
+}
+.location-name{
+    grid-area:name;
+}
+.location-address{
+    grid-area:address;
+}
+.location-city{
+    grid-area:city;
+}
+.location-hours{
+    grid-area:hours;
+}
+.location-phone{
+    grid-area:phone;
+}
+.location-url{
+    grid-area:url;
 }
