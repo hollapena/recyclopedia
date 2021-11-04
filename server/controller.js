@@ -19,7 +19,7 @@ module.exports = {
             info,
             image
         }
-        donate.push(newDonation)
+        donations.push(newDonation)
         globalID++
         res.status(200).send(donations)
 
