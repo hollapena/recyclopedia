@@ -490,6 +490,8 @@ html{
     font-size:11vw;
     margin-top:-80px;
     margin-left:20px;
+    color:#73b599;
+    
 }
 #aboutmebody{
     grid-area:body;

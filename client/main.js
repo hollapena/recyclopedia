@@ -106,6 +106,7 @@ function isRecyclable(evt){
             truecount++
 
             }
+    
         }
             if(truecount=0){
             let modalGuts = document.createElement('div')
@@ -113,6 +114,7 @@ function isRecyclable(evt){
             modalGuts.innerHTML = `<h2 class="modal-title">Aww Man! ${query} isn't recyclable!</h2>`
 
             modalContainer.append(modalGuts)
+            
             }
         document.querySelector('.recycle-modal').style.display='flex';
     })
