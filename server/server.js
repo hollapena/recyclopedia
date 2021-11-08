@@ -19,6 +19,14 @@ app.post('/api/donate', ctrl.createDonation)
 app.put('/api/donate/:id', ctrl.updateDonation)
 app.delete('/api/donate/:id', ctrl.deleteDonation)
 
+app.get('/', function (req,res) {
+    res.sendFile(path.join(__dirname, "../client.index.html"))
+})
+
+app.get('/css', function (req,res) {
+    res.sendFile(path.join(__dirname, "../client/styles.css"))
+})
+
 const port = process.env.PORT || 4567
 
 app.listen(port, () => console.log(`Rockin' and Rollin' on ${port}`))
